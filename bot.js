@@ -38,7 +38,7 @@ console.log(chalk.yellow('👨‍💻 Created by: Chalah Developer'));
 console.log(chalk.green('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'));
 
 // Store setup
-const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
+const store = makeInMemoryStore({ logger: pino().child({ level: 'silent' }) });
 
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState('./auth_info');
