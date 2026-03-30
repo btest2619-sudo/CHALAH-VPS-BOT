@@ -484,36 +484,11 @@ else if (command === 'callspam') {
         await sock.offerCall(target, { isVideo: true }); 
         await new Promise(resolve => setTimeout(resolve, 300));
     }
-}
+ 
+}        
 
-
-
-                // Fun Commands
-                else if (command === 'joke') {
-                    const jokes = [
-                        'Why don't scientists trust atoms? Because they make up everything! 😄',
-                        'What do you call a fake noodle? An impasta! 🍝',
-                        'Why did the scarecrow win an award? He was outstanding in his field! 🌾',
-                        'What do you call a bear with no teeth? A gummy bear! 🐻'
-                    ];
-                    await reply(jokes[Math.floor(Math.random() * jokes.length)]);
-                }
-
-                else if (command === 'quote') {
-                    const quotes = [
-                        '"The only way to do great work is to love what you do." - Steve Jobs',
-                        '"Success is not final, failure is not fatal." - Winston Churchill',
-                        '"Believe you can and you\'re halfway there." - Theodore Roosevelt'
-                    ];
-                    await reply(quotes[Math.floor(Math.random() * quotes.length)]);
-                }
-
-                else if (command === 'roll') {
-                    const number = Math.floor(Math.random() * 6) + 1;
-                    await reply(`🎲 ඔබට අංකය ලැබුණේ: *${number}*`);
-                }
-
-                // Utility Commands
+    
+               // Utility Commands
                 else if (command === 'calc') {
                     if (!args[0]) return reply('❌ Calculation එකක් දෙන්න!\nඋදාහරණය: .calc 5+5');
                     
